@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def root():
-  return None
+  return 'API is working!'
 
 @app.route('/tech/<url>')
 def home(url):
