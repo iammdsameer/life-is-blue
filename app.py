@@ -6,7 +6,7 @@ app = Flask(__name__)
 def root():
   return 'API is working!'
 
-@app.route('/tech/<url>')
+@app.route('/api/<url>')
 def home(url):
   title = request.args.get('title')
   filename = f'{title}.mp3'
