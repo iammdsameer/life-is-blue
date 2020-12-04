@@ -1,10 +1,16 @@
 import youtube_dl
+import os
 from flask import Flask, request, send_file
 app = Flask(__name__)
 
 @app.route('/')
 def root():
   return 'API is working!'
+
+# Test
+@app.route('/ls')
+def list():
+  return os.listdir()
 
 @app.route('/api/<url>')
 def home(url):
